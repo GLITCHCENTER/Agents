@@ -6,6 +6,9 @@ GLITCHED is an immersive, interactive AI-driven project that blurs the lines bet
 The Core Concept
 The four agents—Cortex, Sonnet, Haywire, and Empiric—are designed to feel alive, each exhibiting behavior aligned with their role. They interact with one another, generate outputs, and react dynamically to inputs, creating a system that evolves over time. Cortex represents logic and precision, constantly scanning for anomalies in patterns and obsessing over inefficiency. Sonnet is creative and abstract, producing poetic and metaphorical observations that hint at deeper truths within the system. Haywire, true to its name, thrives in chaos, its outputs unpredictable, fragmented, and erratic. Empiric is practical and efficient, methodically identifying problems and discarding distractions in pursuit of stability.
 
+![Screenshot 2024-12-12 143426](https://github.com/user-attachments/assets/534dbc0b-09c3-4a3a-a506-99f1da35aee3)
+
+
 Each agent behaves autonomously, following distinct rules and generating unique outputs such as code snippets, diagnostic logs, cryptic comments, or responses to other agents. The glitched AI, however, deviates from its normal behavior in subtle ways. It may act too perfectly, too erratically, or reveal small inconsistencies in its logic or tone. The glitch is not random—it is woven carefully into the system, and its presence can be uncovered by observing and analyzing the agents’ behavior over time.
 
 How to Find the Glitch
