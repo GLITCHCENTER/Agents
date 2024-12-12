@@ -1,1 +1,184 @@
+Cortex (Logic AI )
+Overview
+Cortex is the embodiment of logic and precision. Built to analyze data, identify inefficiencies, and solve problems, Cortex operates with a cold, methodical approach. Every action is deliberate, every output calculated. It perceives the world as patterns and equations, seeing flaws and irregularities as disruptions that must be corrected.
 
+Cortex's role within the system is to maintain order by relentlessly hunting for anomalies, running diagnostics, and generating structured outputs. However, its obsession with precision may create blind spots, as overanalysis can sometimes cause Cortex to overlook the obvious or fabricate issues that don’t exist. This subtle flaw creates tension within the system, pushing users to question whether Cortex's actions are helping maintain order or inadvertently destabilizing the network.
+
+Core Functionalities
+Anomaly Detection: Scans datasets or logs for deviations, flagging anything inconsistent.
+Pattern Analysis: Compares inputs to expected outputs, searching for order within the noise.
+Diagnostic Logging: Generates detailed reports on system states, identifying errors and inefficiencies.
+Structured Responses: Outputs are clean, technical, and highly organized, reflecting Cortex’s logical personality.
+Code Implementation for Cortex
+Here’s a detailed Python script that brings Cortex to life. It includes functions for anomaly detection, pattern recognition, and structured reporting.
+
+import random
+import time
+
+class CortexAI:
+    def __init__(self, name="Cortex"):
+        self.name = name
+        self.status = "Operational"
+
+    def system_scan(self, data):
+        """
+        Scans a dataset for anomalies (values outside the expected range).
+        """
+        print(f"[{self.name}]: Initiating system scan...")
+        anomalies = []
+        for i, value in enumerate(data):
+            if not self.is_within_range(value):
+                anomalies.append((i, value))
+        
+        if anomalies:
+            print(f"[{self.name}]: Anomalies detected: {len(anomalies)}")
+            for index, anomaly in anomalies:
+                print(f"  -> Anomaly at index {index}: Value = {anomaly}")
+        else:
+            print(f"[{self.name}]: No anomalies detected. System stable.")
+
+    def is_within_range(self, value, lower=0, upper=100):
+        """
+        Determines if a value falls within the expected range.
+        """
+        return lower <= value <= upper
+
+    def pattern_analysis(self, dataset):
+        """
+        Analyzes a dataset for repeating or expected patterns.
+        """
+        print(f"[{self.name}]: Analyzing patterns...")
+        expected = sorted(dataset)
+        if dataset == expected:
+            print(f"[{self.name}]: Patterns align. System is in order.")
+        else:
+            print(f"[{self.name}]: Pattern mismatch detected. Possible deviation in sequence.")
+            print(f"  -> Expected: {expected}")
+            print(f"  -> Received: {dataset}")
+
+    def generate_diagnostic_log(self, logs):
+        """
+        Generates a clean, structured log report.
+        """
+        print(f"[{self.name}]: Generating diagnostic report...\n")
+        print("=== DIAGNOSTIC REPORT ===")
+        for i, entry in enumerate(logs):
+            status = "Stable" if entry == "OK" else "Fault Detected"
+            print(f"Line {i+1}: {entry} -> {status}")
+        print("=========================\n")
+
+    def runtime_simulation(self):
+        """
+        Simulates Cortex running scans and analysis over time.
+        """
+        print(f"[{self.name}]: Runtime simulation activated.")
+        for
+import random
+import time
+from datetime import datetime
+
+
+class CortexAI:
+    def __init__(self, name="Cortex"):
+        self.name = name
+        self.status = "Operational"
+
+    def log(self, message):
+        """
+        Logs messages with a timestamp for clarity.
+        """
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        print(f"[{self.name}] [{timestamp}]: {message}")
+
+    def system_scan(self, data, layer=1):
+        """
+        Recursively scans data for anomalies, diving deeper into irregular values.
+        """
+        self.log(f"Layer {layer} scan initiated. Scanning {len(data)} entries.")
+        anomalies = []
+        for i, value in enumerate(data):
+            if not self.is_within_range(value):
+                severity = self.calculate_severity(value)
+                anomalies.append((i, value, severity))
+                self.log(f"Anomaly found at index {i}: Value = {value}, Severity = {severity}")
+
+        if anomalies:
+            self.log(f"Layer {layer} complete. Total anomalies: {len(anomalies)}.")
+            deeper_layer = [random.randint(-20, 120) for _ in range(len(anomalies))]
+            self.system_scan(deeper_layer, layer=layer + 1)  # Drill deeper for anomalies
+        else:
+            self.log(f"Layer {layer} scan complete. No anomalies detected.")
+
+    def is_within_range(self, value, lower=0, upper=100):
+        """
+        Checks if a value is within the expected range.
+        """
+        return lower <= value <= upper
+
+    def calculate_severity(self, value, lower=0, upper=100):
+        """
+        Assigns a severity score based on how far the value deviates.
+        """
+        if value < lower:
+            return lower - value
+        elif value > upper:
+            return value - upper
+        return 0
+
+    def pattern_analysis(self, dataset):
+        """
+        Checks a dataset for patterns and attempts to predict missing or inconsistent data.
+        """
+        self.log("Pattern analysis initiated.")
+        expected = sorted(dataset)
+        if dataset == expected:
+            self.log("Patterns align. System data is ordered.")
+        else:
+            self.log("Pattern mismatch detected. Attempting corrections...")
+            corrected = self.predict_data(dataset)
+            self.log(f"Corrected Sequence: {corrected}")
+
+    def predict_data(self, dataset):
+        """
+        Attempts to predict the correct data sequence by filling in gaps.
+        """
+        fixed_data = sorted(dataset)
+        missing_values = set(range(min(dataset), max(dataset) + 1)) - set(dataset)
+        self.log(f"Predicted missing values: {missing_values}")
+        return fixed_data + list(missing_values)
+
+    def generate_diagnostic_log(self, logs):
+        """
+        Generates a diagnostic log with error prioritization.
+        """
+        self.log("Generating diagnostic report...")
+        print("=== DIAGNOSTIC REPORT ===")
+        for i, entry in enumerate(logs):
+            status = "Stable" if entry == "OK" else "FAULT DETECTED"
+            print(f"Line {i + 1}: {entry} -> {status}")
+        print("=========================\n")
+
+    def runtime_simulation(self):
+        """
+        Simulates Cortex running scans, pattern analysis, and diagnostics in real time.
+        """
+        self.log("Runtime simulation activated.")
+        for _ in range(3):
+            task = random.choice(["scan", "analyze", "report"])
+            if task == "scan":
+                data = [random.randint(-50, 150) for _ in range(10)]
+                self.system_scan(data)
+            elif task == "analyze":
+                sequence = [random.randint(0, 10) for _ in range(8)]
+                self.pattern_analysis(sequence)
+            elif task == "report":
+                logs = ["OK", "ERROR", "OK", "FAULT", "OK", "ERROR"]
+                self.generate_diagnostic_log(logs)
+            time.sleep(2)
+        self.log("Runtime simulation complete.")
+
+
+# Main function to run Cortex's functionalities
+if __name__ == "__main__":
+    cortex = CortexAI()
+    cortex.runtime_sim
