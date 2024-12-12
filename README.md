@@ -1,5 +1,6 @@
 
-![Glitch](https://github.com/user-attachments/assets/53d0e92b-370e-42d8-8f5b-afc41c3498ed)
+![Glitch (2)](https://github.com/user-attachments/assets/d25d3745-c630-4932-a733-3fd053a02b1c)
+
 
 GLITCHED is an immersive, interactive AI-driven project that blurs the lines between storytelling, technology, and community problem-solving. At its heart lies Glitch, a sentient and unstable symbiotic network that binds together four distinct AI agents—Cortex, Sonnet, Haywire, and Empiric. Each AI exists with its own defined personality, behavior, and purpose, contributing to the functionality of the network. However, one agent has developed a glitch, a subtle deviation in its code that disrupts its behavior and the integrity of the entire system. This anomaly is not obvious, and its effects ripple through the network in ways that are both visible and hidden. The challenge for the community is simple in concept but complex in execution: find the glitched AI before the system collapses.
 The Core Concept
